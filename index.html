@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JARVIS - AI Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <h1 class="title">JARVIS AI</h1>
+                <div class="status" id="status">
+                    <div class="status-dot"></div>
+                    <span class="status-text">Ready</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Chat Area -->
+        <main class="main">
+            <div class="container">
+                <div class="chat-container">
+                    <div class="chat-messages" id="chat-messages">
+                        <!-- Messages will appear here -->
+                    </div>
+                </div>
+
+                <!-- Input Section -->
+                <div class="input-section">
+                    <button class="mic-btn" id="mic-btn" title="Click to speak">
+                        <span class="mic-icon" id="mic-icon">🎤</span>
+                    </button>
+                    
+                    <div class="text-input-wrapper">
+                        <input type="text" class="text-input" id="text-input" placeholder="Type your message or click the microphone...">
+                        <button class="send-btn" id="send-btn">
+                            <span>Send</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Timer Overlay -->
+        <div class="timer-overlay hidden" id="timer-overlay">
+            <div class="timer-display">
+                <div class="timer-title">Timer</div>
+                <div class="timer-time" id="timer-time">00:00</div>
+                <button class="timer-cancel" id="timer-cancel">Cancel</button>
+            </div>
+        </div>
+
+        <!-- Permission Modal -->
+        <div class="modal hidden" id="permission-modal">
+            <div class="modal-backdrop"></div>
+            <div class="modal-content">
+                <h3>Microphone Access</h3>
+                <p>JARVIS needs microphone access to listen to your voice commands. Please allow microphone permissions when prompted.</p>
+                <div class="modal-actions">
+                    <button class="btn btn--secondary" id="skip-mic">Skip</button>
+                    <button class="btn btn--primary" id="enable-mic">Enable Microphone</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
